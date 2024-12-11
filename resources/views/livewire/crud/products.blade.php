@@ -6,9 +6,6 @@ use function Livewire\Volt\{state, with,usesPagination,layout};
 usesPagination();
 
 with(fn () => ['products' => Product::simplePaginate(10)]);
-// $getTodos = fn() => $this->todos = Product::paginate(10);
-
-// state(['todos' => $getTodos]);
 ?>
 
 <main>
