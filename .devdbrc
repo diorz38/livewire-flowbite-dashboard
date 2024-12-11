@@ -1,0 +1,6 @@
+[
+  {
+    "type": "sqlite",
+    "path": "c:\\git-repo\\flowbite-livewire-dashboard\\database\\database.sqlite"
+  }
+]
