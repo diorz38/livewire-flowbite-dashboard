@@ -42,7 +42,8 @@ new class extends Component {
                     </li>
                     <li>
                         <a href="{{ route('dashboard') }}"
-                            class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
+                            class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700
+                            @if(in_array(Request::segment(1), ['dashboard'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif">
                             <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
@@ -67,7 +68,8 @@ new class extends Component {
                 </li> --}}
                     <li>
                         <button type="button"
-                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700
+                            @if(in_array(Request::segment(1), ['crud'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif"
                             aria-controls="dropdown-crud" data-collapse-toggle="dropdown-crud">
                             <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
@@ -87,11 +89,17 @@ new class extends Component {
                         <ul id="dropdown-crud" class="hidden py-2 space-y-2 ">
                             <li>
                                 <a wire:navigate href="{{ route('crud.products') }}"
-                                    class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Products</a>
+                                    class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 pl-11 dark:text-gray-200 dark:hover:bg-gray-700
+                                    @if(in_array(Request::segment(2), ['products'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif">
+                                    Products
+                                </a>
                             </li>
                             <li>
                                 <a wire:navigate href="{{ route('crud.users') }}"
-                                    class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Users</a>
+                                    class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 pl-11 dark:text-gray-200 dark:hover:bg-gray-700
+                                    @if(in_array(Request::segment(2), ['users'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif">
+                                    Users
+                                </a>
                             </li>
                         </ul>
                     </li>
