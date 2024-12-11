@@ -154,12 +154,12 @@
         }
 
 
-        const chart1 = new ApexCharts(document.getElementById('main-chart'), getMainChartOptions());
-        chart1.render();
+        const chart0 = new ApexCharts(document.getElementById('main-chart'), getMainChartOptions());
+        chart0.render();
 
         // init again when toggling dark mode
         document.addEventListener('dark-mode', function() {
-            chart1.updateOptions(getMainChartOptions());
+            chart0.updateOptions(getMainChartOptions());
         });
     </script>
 @endonce
