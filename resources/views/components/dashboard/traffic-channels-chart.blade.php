@@ -30,8 +30,8 @@
     <div id="traffic-channels-chart" class="w-full"></div>
 
 </div>
-@once
-    <script>
+<script data-navigate-once>
+    document.addEventListener('livewire:navigated', () => {
         getTrafficChannelsChartOptions = () => {
 
             let trafficChannelsChartColors = {}
@@ -113,7 +113,7 @@
                 },
             };
         }
-        const chart3 = new ApexCharts(document.getElementById('traffic-by-device'),
+        var chart3 = new ApexCharts(document.getElementById('traffic-by-device'),
             getTrafficChannelsChartOptions());
         chart3.render();
 
@@ -121,5 +121,5 @@
         document.addEventListener('dark-mode', function() {
             chart3.updateOptions(getTrafficChannelsChartOptions());
         });
-    </script>
-@endonce
+    });
+</script>

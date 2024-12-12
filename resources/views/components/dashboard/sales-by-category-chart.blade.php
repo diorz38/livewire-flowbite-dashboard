@@ -58,7 +58,8 @@
     <div class="w-full" id="sales-by-category"></div>
 </div>
 @once
-    <script>
+    <script data-navigate-once>
+        document.addEventListener('livewire:navigated', () => {
             options = {
                 colors: ['#1A56DB', '#FDBA8C'],
                 series: [{
@@ -226,7 +227,8 @@
                 }
             };
 
-            const chart6 = new ApexCharts(document.getElementById('sales-by-category'), options);
+            var chart6 = new ApexCharts(document.getElementById('sales-by-category'), options);
             chart6.render();
+        });
     </script>
 @endonce

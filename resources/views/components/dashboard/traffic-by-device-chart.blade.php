@@ -16,8 +16,8 @@
     </div>
     <div id="traffic-by-device"></div>
 </div>
-@once
-    <script>
+<script data-navigate-once>
+    document.addEventListener('livewire:navigated', () => {
         getTrafficChannelsChartOptions = () => {
 
             let trafficChannelsChartColors = {}
@@ -100,13 +100,11 @@
             };
         }
 
-        const chart5 = new ApexCharts(document.getElementById('traffic-by-device'),
-            getTrafficChannelsChartOptions());
+        var chart5 = new ApexCharts(document.getElementById('traffic-by-device'),getTrafficChannelsChartOptions());
         chart5.render();
-
-        // init again when toggling dark mode
-        document.addEventListener('dark-mode', function() {
-            chart5.updateOptions(getTrafficChannelsChartOptions());
-        });
-    </script>
-@endonce
+    });
+    // init again when toggling dark mode
+    document.addEventListener('dark-mode', function() {
+        chart5.updateOptions(getTrafficChannelsChartOptions());
+    });
+</script>

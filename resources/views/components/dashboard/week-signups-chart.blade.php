@@ -19,8 +19,8 @@
         <div class="w-full" id="week-signups-chart"></div>
     </div>
 </div>
-@once
-    <script>
+<script data-navigate-once>
+    document.addEventListener('livewire:navigated', () => {
         getSignupsChartOptions = () => {
             let signupsChartColors = {}
 
@@ -118,12 +118,12 @@
             };
         }
 
-        const chart2 = new ApexCharts(document.getElementById('week-signups-chart'), getSignupsChartOptions());
+        var chart2 = new ApexCharts(document.getElementById('week-signups-chart'), getSignupsChartOptions());
         chart2.render();
 
         // init again when toggling dark mode
         document.addEventListener('dark-mode', function() {
             chart2.updateOptions(getSignupsChartOptions());
         });
-    </script>
-@endonce
+    });
+</script>
