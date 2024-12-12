@@ -1,8 +1,9 @@
 <div>
-    <div class="w-full">
+    <div class="md:flex w-full">
+        <div class="sm:w-full">
         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">New products</h3>
         <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white">2,340</span>
-        <p class="flex items-center text-base font-normal text-gray-500 dark:text-gray-400">
+        <p class="flex items-center text-base font-sm text-gray-500 dark:text-gray-400">
             <span class="flex items-center mr-1.5 text-sm text-green-500 dark:text-green-400">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true">
@@ -12,10 +13,11 @@
                 </svg>
                 12.5%
             </span>
-            Since last month
+            <span class="text-xs">Since last month</span>
         </p>
     </div>
     <div class="w-full" id="new-products-chart"></div>
+</div>
 </div>
 @once
     <script>

@@ -1,3 +1,21 @@
+<?php
+
+use Livewire\Volt\Component;
+
+new class extends Component
+{
+    public function logout(): void
+    {
+        auth()->guard('web')->logout();
+
+        session()->invalidate();
+        session()->regenerateToken();
+
+        $this->redirect('/', navigate: true);
+    }
+};
+?>
+
 <div class="flex items-center justify-between lg:order-2">
     @auth
     <button type="button" data-dropdown-toggle="notification-dropdown"
@@ -384,7 +402,7 @@
                     role="menuitem">Profil</a>
             </li>
             <li>
-                <a wire:click="logout" style="cursor:pointer"
+                <a wire:click="logout" style="cursor:pointer" href="{{ route('welcome') }}"
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                     role="menuitem">Sign out</a>
             </li>
