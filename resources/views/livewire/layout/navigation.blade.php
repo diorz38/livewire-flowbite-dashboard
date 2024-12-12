@@ -385,19 +385,14 @@ new class extends Component
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a wire:navigate href="#"
+                                <a href="{{ route('welcome') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Dashboard</a>
+                                    role="menuitem">Halaman Depan</a>
                             </li>
                             <li>
-                                <a wire:navigate href="#"
+                                <a wire:navigate href="{{ route('profile.show') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Settings</a>
-                            </li>
-                            <li>
-                                <a wire:navigate href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Earnings</a>
+                                    role="menuitem">Profil</a>
                             </li>
                             <li>
                                 <a wire:click="logout" style="cursor:pointer"

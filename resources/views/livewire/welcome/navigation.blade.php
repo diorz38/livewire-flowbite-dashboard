@@ -183,6 +183,7 @@
     </div>
 
     @if (Route::has('login'))
+    @guest
     <button type="button"
         class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
         id="userMenuDropdownButton" aria-expanded="false"
@@ -224,7 +225,7 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
     </button>
-    @endif
+    @endguest
 
     @auth
     <button type="button" data-dropdown-toggle="apps-dropdown"
@@ -363,7 +364,33 @@
 
     <div class="z-50 hidden w-56 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
         id="userMenuDropdown">
-        <div class="px-4 py-3">
+        <div class="px-4 py-3" role="none">
+            <p class="text-sm text-gray-900 dark:text-white" role="none" x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name">
+            </p>
+            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                role="none" x-data="{ email: '{{ auth()->user()->email }}' }" x-text="email" x-on:profile-updated.window="email = $event.detail.email">
+                {{ auth()->user()->email }}
+            </p>
+        </div>
+        <ul class="py-1" role="none">
+            <li>
+                <a href="{{ route('dashboard') }}"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">Dashboard</a>
+            </li>
+            <li>
+                <a wire:navigate href="{{ route('profile.show') }}"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">Profil</a>
+            </li>
+            <li>
+                <a wire:click="logout" style="cursor:pointer"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">Sign out</a>
+            </li>
+        </ul>
+
+        {{-- <div class="px-4 py-3">
             <span class="block text-sm font-semibold text-gray-900 dark:text-white">Neil
                 Sims</span>
             <span
@@ -411,7 +438,7 @@
                     class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
                     out</a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 
     <button type="button" id="toggleMobileMenuButton" data-collapse-toggle="toggleMobileMenu"
@@ -425,4 +452,5 @@
         </svg>
     </button>
     @endauth
+    @endif
 </div>

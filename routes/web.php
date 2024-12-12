@@ -6,7 +6,7 @@ use App\Livewire\Kegiatan\Index as KegiatanIndex;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
