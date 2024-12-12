@@ -1,10 +1,9 @@
 <?php
 
-use App\Models\product;
+use App\Models\Product;
 use function Livewire\Volt\{state, with,usesPagination,layout};
 
 usesPagination();
-
 with(fn () => ['products' => Product::simplePaginate(10)]);
 ?>
 
@@ -237,7 +236,6 @@ with(fn () => ['products' => Product::simplePaginate(10)]);
     </div>
     {{-- <div
         class="sticky bottom-0 right-0 items-center w-full p-4 bg-white border-t border-gray-200 sm:flex sm:justify-between dark:bg-gray-800 dark:border-gray-700">
-        {{ $products->links() }}
         <div class="flex items-center mb-4 sm:mb-0">
             <a href="#"
                 class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
