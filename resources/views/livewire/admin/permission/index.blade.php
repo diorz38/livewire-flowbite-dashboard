@@ -66,10 +66,10 @@
                         data-drawer-placement="right">
                         Add new Role
                     </button>
-                    <button id="createRoleButton"
+                    <button id="createPermissionButton"
                         class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-                        type="button" data-drawer-target="drawer-create-role-default"
-                        data-drawer-show="drawer-create-role-default" aria-controls="drawer-create-role-default"
+                        type="button" data-drawer-target="drawer-create-permission-default"
+                        data-drawer-show="drawer-create-permission-default" aria-controls="drawer-create-permission-default"
                         data-drawer-placement="right">
                         Add new Permission
                     </button>
@@ -120,10 +120,10 @@
                                                 {{ $product->name }}</div>
                                         </td>
                                         <td class="p-4 space-x-2 whitespace-nowrap">
-                                            <button type="button" id="updateProductButton"
-                                                data-drawer-target="drawer-update-product-default"
-                                                data-drawer-show="drawer-update-product-default"
-                                                aria-controls="drawer-update-product-default"
+                                            <button type="button" id="createRoleButton"
+                                                data-drawer-target="drawer-create-role-default"
+                                                data-drawer-show="drawer-create-role-default"
+                                                aria-controls="drawer-create-role-default"
                                                 data-drawer-placement="right"
                                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
@@ -253,12 +253,12 @@
             {{ $permissions->links() }}
         </div>
     </div>
-    <!-- Edit Role Or Permission Drawer -->
-    {{-- <livewire:admin.update-role /> --}}
+    <!-- EditPermission Drawer -->
+    <livewire:admin.permission.edit />
 
-    <!-- Delete Role Or Permission Drawer -->
-    {{-- <livewire:admin.delete-role /> --}}
+    <!-- Delete Permission Drawer -->
+    <livewire:admin.permission.delete />
 
-    <!-- Add Role Or Permission Drawer -->
-    {{-- <livewire:admin.create-role /> --}}
+    <!-- Add Permission Drawer -->
+    <livewire:admin.permission.create />
 </main>
