@@ -15,8 +15,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::view('profile', 'profile')->name('profile');
-
     Volt::route('/settings', 'settings')->name('settings');
 
     Volt::route('/crud/products', 'crud.products')->name('crud.products');
