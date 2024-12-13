@@ -1,19 +1,19 @@
 <div>
-    <x-dialog-modal wire:model.live="modalPermissionDelete">
+    <x-dialog-modal wire:model.live="modalRoleDelete">
         <x-slot name="title">
-            Hapus Izin
+            Hapus Peran
         </x-slot>
 
         <x-slot name="content">
 
-            <p class="text-lg">Apakah Anda ingin menghapus Izin dengan ID: <strong>{{ $id }}</strong> yaitu
+            <p class="text-lg">Apakah Anda ingin menghapus Peran dengan ID: <strong>{{ $id }}</strong> yaitu
                 <strong>{{ $nama }}</strong>?
             </p>
 
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button @click="$wire.set('modalPermissionDelete', false)" wire:loading.attr="disabled">
+            <x-secondary-button @click="$wire.set('modalRoleDelete', false)" wire:loading.attr="disabled">
                 Batal
             </x-secondary-button>
 

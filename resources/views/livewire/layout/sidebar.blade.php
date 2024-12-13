@@ -252,10 +252,10 @@ new class extends Component {
                         <ul id="dropdown-admin" class="py-2 space-y-2
                         @if(!in_array(Request::segment(1), ['admin'])){{ 'hidden' }}@endif">
                             <li>
-                                <a wire:navigate href="{{ route('admin.permission') }}"
+                                <a wire:navigate href="{{ route('admin.role-permission') }}"
                                     class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 pl-11 dark:text-gray-200 dark:hover:bg-gray-700
-                                    @if(in_array(Request::segment(2), ['permission'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif">
-                                    Permission
+                                    @if(in_array(Request::segment(2), ['role-permission'])){{ 'bg-gray-100 dark:bg-gray-400 hover:text-gray-900 dark:hover:text-white' }}@endif">
+                                    Role & Permission
                                 </a>
                             </li>
                             <li>

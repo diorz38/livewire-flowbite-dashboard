@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire\Admin\Permission;
+namespace App\Livewire\Admin\Role;
 
-use App\Livewire\Forms\PermissionForm;
-use Spatie\Permission\Models\Permission;
+use App\Livewire\Forms\RoleForm;
+use Spatie\Permission\Models\Role;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -16,34 +16,32 @@ class Delete extends Component
     #[Locked]
     public $nama;
 
-    public $modalPermissionDelete = false;
+    public $modalRoleDelete = false;
 
-    #[On('dispatch-permissions-table-delete')]
-    public function set_permission($id, $nama)
+    #[On('dispatch-roles-table-delete')]
+    public function set_role($id, $nama)
     {
         $this->id = $id;
         $this->nama = $nama;
 
-        $this->modalPermissionDelete = true;
+        $this->modalRoleDelete = true;
     }
 
     public function del()
     {
         if (\Auth::user()->hasRole('super-admin')){
-            $del = Kegiatan::destroy($this->id);
+            $del = Role::where('id', $this->id)->delete();
         }
-
-        $this->modalPermissionDelete = false;
+        $this->modalRoleDelete = false;
 
         is_null($del)
             ? $this->dispatch('notify', title: 'failed', message: 'Data Gagal Dihapus !')
             : $this->dispatch('notify', title: 'success', message: 'Data Berhasil Dihapus !');
 
-        $this->dispatch('dispatch-permissions-delete-del')->to(Table::class);
+        $this->dispatch('dispatch-roles-delete-del')->to(Table::class);
     }
     public function render()
-
     {
-        return view('livewire.admin.permission.delete');
+        return view('livewire.admin.role.delete');
     }
 }

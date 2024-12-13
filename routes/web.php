@@ -40,7 +40,9 @@ Route::middleware([
 
     Route::group(['middleware' => ['role:super-admin']], function () {
         Volt::route('/admin/user', 'admin.users')->name('admin.user');
-        Volt::route('/admin/permission', App\Livewire\Admin\Permission\Index::class)->name('admin.permission');
+        Volt::route('/admin/role-permission', 'admin.role-permission')->name('admin.role-permission');
+        // Route::get('/admin/permission', App\Livewire\Admin\Permission\Index::class)->name('admin.permission');
+        // Route::get('/admin/role', App\Livewire\Admin\Role\Index::class)->name('admin.role');
 
     });
 
