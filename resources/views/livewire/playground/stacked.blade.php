@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{state, layout};
 
-layout('layouts.guest');
+layout('layouts.base');
 
 ?>
 

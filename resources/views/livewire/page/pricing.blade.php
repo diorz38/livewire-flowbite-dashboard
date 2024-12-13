@@ -7,7 +7,7 @@ layout('layouts.base');
 ?>
 
 <div>
-    <nav class="fixed z-50 w-full bg-white border-b border-gray-200 sm:py-2 dark:bg-gray-800 dark:border-gray-700">
+    {{-- <nav class="fixed z-50 w-full bg-white border-b border-gray-200 sm:py-2 dark:bg-gray-800 dark:border-gray-700">
         <div class="container py-3 mx-auto">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
@@ -108,7 +108,7 @@ layout('layouts.base');
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> --}}
 
     <main class="bg-gray-50 dark:bg-gray-900">
 
