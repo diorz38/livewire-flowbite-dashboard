@@ -6,6 +6,7 @@
       <img alt="Flowbite - Tailwind CSS components" width="250"  src="https://flowbite.s3.amazonaws.com/github/logo-github.png">
     </a>
 </p>
+
 ## About Template
 
 This is Laravel 11 template that use flowbite UI for Interface, the package that in use:
@@ -22,6 +23,7 @@ This is Laravel 11 template that use flowbite UI for Interface, the package that
 Just click use this template and from there you can clone it to your machine.
 
 ### Instalation
+
 ```
 composer install
 cp .example.env .env
