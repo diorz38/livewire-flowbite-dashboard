@@ -3,6 +3,8 @@
 use App\Models\Product;
 use function Livewire\Volt\{state, with,usesPagination,layout};
 
+layout('layouts.app');
+
 usesPagination();
 with(fn () => ['products' => Product::simplePaginate(10)]);
 ?>

@@ -241,7 +241,7 @@ new class extends Component
         <span class="sr-only">Open menu</span>
         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
+        </svg>
     </button>
     @endguest
 
@@ -376,8 +376,9 @@ new class extends Component
         id="userMenuDropdownButton" aria-expanded="false"
         data-dropdown-toggle="userMenuDropdown">
         <span class="sr-only">Open user menu</span>
-        <img class="w-8 h-8 rounded-full"
-            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+        @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+        <img src="{{ \Auth::user()->profile_photo_url }}" alt="{{\Auth::user()->name }}" class="object-cover rounded-full size-10">
+        @endif
     </button>
 
     <div class="z-50 hidden w-56 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -407,56 +408,6 @@ new class extends Component
                     role="menuitem">Sign out</a>
             </li>
         </ul>
-
-        {{-- <div class="px-4 py-3">
-            <span class="block text-sm font-semibold text-gray-900 dark:text-white">Neil
-                Sims</span>
-            <span
-                class="block text-sm font-light text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-        </div>
-        <ul class="py-1 font-light text-gray-500 dark:text-gray-400"
-            aria-labelledby="userMenuDropdownButton">
-            <li>
-                <a wire:navigate href="#"
-                    class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My
-                    profile</a>
-            </li>
-            <li>
-                <a wire:navigate href="#"
-                    class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Account
-                    settings</a>
-            </li>
-        </ul>
-        <ul class="py-1 font-light text-gray-500 dark:text-gray-400"
-            aria-labelledby="userMenuDropdownButton">
-            <li>
-                <a wire:navigate href="#"
-                    class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
-                        class="w-5 h-5 mr-2 text-gray-400" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                            clip-rule="evenodd"></path>
-                    </svg> My likes</a>
-            </li>
-            <li>
-                <a wire:navigate href="#"
-                    class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
-                        class="w-5 h-5 mr-2 text-gray-400" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
-                        </path>
-                    </svg> Collections</a>
-            </li>
-        </ul>
-        <ul class="py-1 font-light text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
-            <li>
-                <a wire:navigate href="#"
-                    class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                    out</a>
-            </li>
-        </ul> --}}
     </div>
 
     <button type="button" id="toggleMobileMenuButton" data-collapse-toggle="toggleMobileMenu"

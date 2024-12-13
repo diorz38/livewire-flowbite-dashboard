@@ -38,4 +38,10 @@ Route::middleware([
 
     Route::get('/kegiatan', KegiatanIndex::class)->name('kegiatan.index');
 
+    Route::group(['middleware' => ['role:super-admin']], function () {
+        Volt::route('/admin/user', 'admin.users')->name('admin.user');
+        Volt::route('/admin/permission', App\Livewire\Admin\Permission\Index::class)->name('admin.permission');
+
+    });
+
 });
