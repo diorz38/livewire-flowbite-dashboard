@@ -14,7 +14,7 @@ class Kegiatan extends Model
 
     protected $table = 'kegiatan';
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
     protected $casts = [
         'tgl_mulai' => 'date',
