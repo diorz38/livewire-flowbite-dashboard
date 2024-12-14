@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Livewire\Kegiatan\Index as KegiatanIndex;
+use App\Livewire\Admin\User\Table as AdminUserTable;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,7 +38,8 @@ Route::middleware([
     Route::get('/kegiatan', KegiatanIndex::class)->name('kegiatan.index');
 
     Route::group(['middleware' => ['role:super-admin']], function () {
-        Volt::route('/admin/user', 'admin.users')->name('admin.user');
+        Route::get('/admin/user', AdminUserTable::class)->name('admin.user');
+        // Volt::route('/admin/user', 'admin.users')->name('admin.user');
         Volt::route('/admin/role-permission', 'admin.role-permission')->name('admin.role-permission');
     });
 

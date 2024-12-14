@@ -1,10 +1,10 @@
 @props(['name' => 'drawer', 'label' => 'example', 'width' => 'max-w-xl'])
 
-<div <div x-data="{ modalIsOpen: false, name: '{{ $name }}' }" {{ $attributes }}>
+<div <div x-data="{ modalIsOpen: @entangle($attributes->wire('model')), name: '{{ $name }}' }" {{ $attributes }}>
     <div drawer-backdrop="" x-cloak
         x-show="modalIsOpen"
         x-on:open-modal.window = "modalIsOpen = ($event.detail.name === name)"
-        x-on:close-modal.window = " $event.detail.name === name ? modalIsOpen = false : ''"
+        x-on:close-modal.window = "$event.detail.name === name ? modalIsOpen = false : ''"
         x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
         @click.self="modalIsOpen = false" class="bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30">
         <div id="{{ $name }}"
