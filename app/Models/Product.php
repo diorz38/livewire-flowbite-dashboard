@@ -12,7 +12,7 @@ class Product extends Model
 
     public function getRows()
     {
-        $json = file_get_contents(public_path('storage/products.json'));
+        $json = file_get_contents(public_path('data/products.json'));
         $data = json_decode($json, true);
         // dd($data);
 
