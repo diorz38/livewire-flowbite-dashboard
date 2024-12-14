@@ -15,6 +15,7 @@ This is Laravel 11 template that use flowbite UI for Interface, the package that
 - Livewire v3.
 - Livewire Volt for static pages.
 - Spatie Permission.
+- CRUD Role & Permission and User
 - All example page from Flowbite Admin Demo had been remade with Volt.
 - All charts hade been remade as separate components.
 

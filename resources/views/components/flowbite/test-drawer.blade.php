@@ -1,6 +1,6 @@
 @props(['name' => 'drawer', 'label' => 'example', 'width' => 'max-w-xl'])
 
-<div <div x-data="{ modalIsOpen: @entangle($attributes->wire('model')), name: '{{ $name }}' }" {{ $attributes }}>
+<div <div x-data="{ modalIsOpen: false, name: '{{ $name }}' }" {{ $attributes }}>
     <div drawer-backdrop="" x-cloak
         x-show="modalIsOpen"
         x-on:open-modal.window = "modalIsOpen = ($event.detail.name === name)"

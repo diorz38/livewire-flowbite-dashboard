@@ -239,7 +239,7 @@ with(fn () => ['products' => Product::simplePaginate(10)]);
     </div>
 
     <!-- Add Product Drawer -->
-    <x-flowbite.drawer name="create-product" label="Add new product" width="max-w-xl">
+    <x-flowbite.test-drawer name="create-product" label="Add new product" width="max-w-xl">
         <div>
             <label for="name"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -303,10 +303,10 @@ with(fn () => ['products' => Product::simplePaginate(10)]);
                 Cancel
             </button>
         </div>
-    </x-flowbite.drawer>
+    </x-flowbite.test-drawer>
 
     <!-- Edit Product Drawer -->
-    <x-flowbite.drawer name="edit-product" label="Edit product" width="max-w-xl">
+    <x-flowbite.test-drawer name="edit-product" label="Edit product" width="max-w-xl">
         <div>
             <label for="name"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -358,10 +358,10 @@ with(fn () => ['products' => Product::simplePaginate(10)]);
                 Cancel
             </button>
         </div>
-    </x-flowbite.drawer>
+    </x-flowbite.test-drawer>
 
     <!-- Delete Product Drawer -->
-    <x-flowbite.drawer name="delete-product" label="Delete product" width="max-w-xs">
+    <x-flowbite.test-drawer name="delete-product" label="Delete product" width="max-w-xs">
         <svg class="w-10 h-10 mt-8 mb-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -378,6 +378,6 @@ with(fn () => ['products' => Product::simplePaginate(10)]);
             data-modal-toggle="delete-product-modal">
             No, cancel
         </a>
-    </x-flowbite.drawer>
+    </x-flowbite.test-drawer>
 
 </main>
