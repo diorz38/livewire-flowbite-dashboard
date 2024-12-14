@@ -48,14 +48,15 @@
             <div class="sm:flex">
                 <div
                     class="items-center hidden mb-3 sm:flex sm:divide-x sm:divide-gray-100 sm:mb-0 dark:divide-gray-700">
-                    <form class="lg:pr-3" action="#" method="GET">
-                        <label for="users-search" class="sr-only">Search</label>
+                    <div>
+                        <label for="search" class="sr-only">Search</label>
                         <div class="relative mt-1 lg:w-64 xl:w-96">
-                            <input type="text" name="email" id="users-search"
+                            <input type="text" id="search" wire:model.live.debounce.300ms="search"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 placeholder="Search for users">
                         </div>
-                    </form>
+                        {{ $search }}
+                    </div>
                     <div class="flex pl-0 mt-3 space-x-1 sm:pl-2 sm:mt-0">
                         <a href="#"
                             class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -96,7 +97,8 @@
                     </div>
                 </div>
                 <div class="flex items-center ml-auto space-x-2 sm:space-x-3">
-                    <button type="button" data-modal-target="add-user-modal" data-modal-toggle="add-user-modal"
+                    <livewire:admin.user.create />
+                    {{-- <button type="button" data-modal-target="add-user-modal" data-modal-toggle="add-user-modal"
                         class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                         <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +107,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                         Add user
-                    </button>
+                    </button> --}}
                     <a href="#"
                         class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
                         <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
@@ -192,9 +194,9 @@
                                     </div>
                                 </td>
                                 <td class="p-4 space-x-2 whitespace-nowrap">
-                                    <button type="button" data-modal-target="edit-user-modal"
-                                        data-modal-toggle="edit-user-modal"
-                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                    <button type="button"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                        @click="$dispatch('dispatch-user-table-edit', {id: '{{ $item->id }}'})">
                                         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -206,8 +208,7 @@
                                         </svg>
                                         Edit user
                                     </button>
-                                    <button type="button" data-modal-target="delete-user-modal"
-                                        data-modal-toggle="delete-user-modal"
+                                    <button type="button"
                                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
                                         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -241,8 +242,7 @@
 </div>
 
     <!-- Edit User Modal -->
-
-    <!-- Add User Modal -->
+    <livewire:admin.user.edit />
 
     <!-- Delete User Modal -->
 
