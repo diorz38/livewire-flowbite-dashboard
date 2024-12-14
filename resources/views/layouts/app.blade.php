@@ -50,7 +50,7 @@
 
     </div>
 
-    @stack('modals')
+    {{-- @stack('modals') --}}
 
     @livewireScripts
 
