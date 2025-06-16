@@ -1,9 +1,11 @@
 <?php
 
+use App\Livewire\ExampleChart;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Livewire\Kegiatan\Index as KegiatanIndex;
 use App\Livewire\Admin\User\Table as AdminUserTable;
+use phpDocumentor\Reflection\DocBlock\Tags\Example;
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,7 +37,7 @@ Route::middleware([
     Volt::route('/playground/stacked', 'playground.stacked')->name('playground.stacked');
     Volt::route('/playground/sidebar', 'playground.sidebar')->name('playground.sidebar');
 
-    Route::get('/kegiatan', KegiatanIndex::class)->name('kegiatan.index');
+    Route::get('/apex', ExampleChart::class)->name('apex.chart');
 
     Route::group(['middleware' => ['role:super-admin']], function () {
         Route::get('/admin/user', AdminUserTable::class)->name('admin.user');

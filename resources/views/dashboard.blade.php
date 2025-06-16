@@ -5,7 +5,7 @@
                 <!-- Main widget -->
                 <div
                     class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.main-chart />
+                    <livewire:dashboard.main-chart />
                     <!-- Card Footer -->
                     <div
                         class="flex items-center justify-between pt-3 mt-4 border-t border-gray-200 sm:pt-6 dark:border-gray-700">
@@ -451,21 +451,21 @@
             <div class="grid w-full grid-cols-1 gap-4 mt-4 xl:grid-cols-2 2xl:grid-cols-3">
                 <div
                     class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.new-products-chart />
+                    <livewire:dashboard.new-product-chart />
                 </div>
                 <div
                     class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.week-signups-chart />
+                    <livewire:dashboard.week-signups-chart />
                 </div>
                 <div
                     class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.traffic-channels-chart />
+                    <livewire:dashboard.traffic-channels-chart />
                 </div>
             </div>
             <div class="grid grid-cols-1 my-4 xl:grid-cols-2 xl:gap-4">
                 <div
                     class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.traffic-by-device-chart />
+                    <livewire:dashboard.traffic-device-chart />
                     <!-- Card Footer -->
                     <div class="flex items-center justify-between pt-4 lg:justify-evenly sm:pt-6">
                         <div>
@@ -547,7 +547,7 @@
                 <!-- Right Content -->
                 <div
                     class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-                    <x-dashboard.sales-by-category-chart />
+                    <livewire:dashboard.sales-category-chart />
                     <!-- Card Footer -->
                     <div
                         class="flex items-center justify-between pt-3 mt-4 border-t border-gray-200 sm:pt-6 dark:border-gray-700">

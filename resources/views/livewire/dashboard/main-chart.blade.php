@@ -14,14 +14,14 @@
             </svg>
         </div>
     </div>
-    <div id="main-chart"></div>
+    <div id="{{ $chartId }}"></div>
 </div>
 @once
     <script>
         document.addEventListener('livewire:navigated', () => {
             // Fungsi untuk inisialisasi chart
             function initApexChart() {
-                const chartElement = document.getElementById('main-chart');
+                const chartElement = document.getElementById('{{ $chartId }}');
                 
                 if (!chartElement) {
                     console.error('Chart container not found');
@@ -50,5 +50,6 @@
             }, 100);
         });
     </script>
+
 
 @endonce
