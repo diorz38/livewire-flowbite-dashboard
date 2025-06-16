@@ -9,7 +9,7 @@
 
 ## About Template
 
-This is Laravel 11 template that use flowbite UI for Interface, the package that in use:
+This is Laravel 12 template that use flowbite UI for Interface, the package that in use:
 
 - Laravel Jetstream.
 - Livewire v3.
