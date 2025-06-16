@@ -1,218 +1,56 @@
 [
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 1,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 2,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "10%"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 3,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 4,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 5,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "25%"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 6,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "10%"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 7,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 8,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 9,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 10,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 11,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "30%"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 12,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 13,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 14,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 15,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "5%"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 16,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 17,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 18,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 19,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "50%"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 20,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 21,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 22,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "10%"
-    },
-    {
-        "name": "Education Dashboard",
-        "category": "Html templates",
-        "technology": "Angular",
-        "id": 23,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$149",
-        "discount": "No"
-    },
-    {
-        "name": "React UI Kit",
-        "category": "Html templates",
-        "technology": "React JS",
-        "id": 24,
-        "description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-        "price": "$129",
-        "discount": "No"
-    }
+  {
+    "name": "Education Dashboard",
+    "category": "HTML Templates",
+    "technology": "Angular",
+    "description": "An Education Dashboard built with Angular provides a user interface for managing and visualizing data related to educational institutions, students, and staff. It often includes features like student information management, class scheduling, performance tracking, and communication tools, all accessible through a customizable, responsive interface.",
+    "id": "1",
+    "price": 149,
+    "discount": "No"
+  },
+  {
+    "name": "React UI Kit",
+    "category": "HTML Templates",
+    "technology": "React JS",
+    "description": "React UI kits are collections of pre-built, reusable user interface components for React applications. They accelerate development by providing ready-made elements like buttons, modals, and navigation bars. These kits promote design consistency, improve code quality, and often include responsive features.",
+    "id": "2",
+    "price": 129,
+    "discount": 0.1
+  },
+  {
+    "name": "HRM Dashboard",
+    "category": "HTML Templates",
+    "technology": "Laravel",
+    "description": "A Laravel HRM (Human Resource Management) dashboard provides a centralized interface for managing various HR functions within a Laravel application. It typically includes modules for employee management, performance assessment, payroll, recruitment, and reporting, all accessible through a web interface.",
+    "id": "3",
+    "price": 149,
+    "discount": "No"
+  },
+  {
+    "name": "School Dashboard",
+    "category": "HTML Templates",
+    "technology": "Vue 3",
+    "description": "A School Dashboard built with Vue 3 provides a dynamic and efficient way to manage and visualize data related to educational institutions. Several Vue 3 admin templates and components are available to facilitate the development of such dashboards. These include pre-built templates like Admin One Vue Tailwind, CoreUI Vue, and Berry Dashboard, as well as components from Syncfusion and Vuestic UI.",
+    "id": "4",
+    "price": 129,
+    "discount": "No"
+  },
+  {
+    "name": "Smax UI Kit",
+    "category": "HTML Templates",
+    "technology": "Svelte",
+    "description": "Smax UI Kit is not a commonly known UI library for Svelte. However, there are several excellent UI kits available for Svelte, such as Skeleton, Flowbite Svelte, and others, that provide a wide range of pre-built components and features to help developers build modern and responsive web applications. These libraries offer various UI components like buttons, forms, modals, and more, with customization options and support for Tailwind CSS, making them ideal for creating visually appealing and functional interfaces.",
+    "id": "5",
+    "price": 119,
+    "discount": 0.25
+  },
+  {
+    "name": "Gym Adviser",
+    "category": "Mobile Templates",
+   "technology": "Flutter",
+    "description": "A Flutter-based gym advisor app could offer features like personalized workout plans, exercise tracking, nutrition guidance, and progress monitoring. It could also include features like gym location finding, trainer profiles, and community interaction.",
+    "id": "6",
+    "price": 135,
+    "discount": "No"
+  }
 ]
