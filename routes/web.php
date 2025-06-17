@@ -39,6 +39,8 @@ Route::middleware([
 
     Route::get('/apex', ExampleChart::class)->name('apex.chart');
 
+    Route::get('/kegiatan', KegiatanIndex::class)->name('kegiatan.index');
+
     Route::group(['middleware' => ['role:super-admin']], function () {
         Route::get('/admin/user', AdminUserTable::class)->name('admin.user');
         // Volt::route('/admin/user', 'admin.users')->name('admin.user');
