@@ -27,7 +27,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('departments', function (Blueprint $table) {
+        Schema::create('departements', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
@@ -94,7 +94,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('organizations');
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('departements');
         Schema::dropIfExists('projects');
         Schema::dropIfExists('assignments');
         Schema::dropIfExists('tasks');

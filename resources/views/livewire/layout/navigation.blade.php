@@ -35,9 +35,11 @@ new class extends Component
                     </svg>
                 </button>
                 <a wire:navigate href="{{ route('dashboard') }}" class="flex ml-2 md:mr-24">
-                    <img src="{{ asset('images/logo.svg') }}" class="h-8 mr-3" alt="FlowBite Logo" />
+                    <img src="{{ asset('manpro8.svg') }}" class="h-16 mr-1" alt="Manpro Logo" />
                     <span
-                        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+                        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+                        Man<span class="text-yellow-400">pro</span>
+                    </span>
                 </a>
                 <form action="#" method="GET" class="hidden lg:block lg:pl-3.5">
                     <label for="topbar-search" class="sr-only">Search</label>

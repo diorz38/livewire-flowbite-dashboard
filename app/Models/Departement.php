@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Organization extends Model
+class Departement extends Model
 {
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
@@ -14,8 +14,8 @@ class Organization extends Model
     {
         return $this->belongsToMany(User::class);
     }
-    public function departemens(): HasMany
+    public function organization(): BelongsTo
     {
-        return $this->hasMany(Departement::class);
-    }
+        return $this->belongsTo(Organization::class);
+    }    
 }

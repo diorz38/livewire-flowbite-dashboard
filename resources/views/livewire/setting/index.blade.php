@@ -1,5 +1,5 @@
 <main>
-
+    <x-mary-toast />
     <div class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
         <div class="mb-4 col-span-full xl:mb-2">
             <nav class="flex mb-5" aria-label="Breadcrumb">
@@ -52,12 +52,12 @@
                     <img class="mb-4 rounded-lg w-28 h-28 sm:mb-0 xl:mb-4 2xl:mb-0"
                         src="http://127.0.0.1:8000/images/users/bonnie-green-2x.png" alt="Jese picture">
                     <div>
-                        <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Profile picture</h3>
+                        <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">{{ \Auth::user()->name }}</h3>
                         <div class="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                            JPG, GIF or PNG. Max size of 800K
+                            {{ \Auth::user()->email }}
                         </div>
                         <div class="flex items-center space-x-4">
-                            <button type="button"
+                            <a as="button" href="{{ route('profile.show') }}" wire:navigate
                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <svg class="w-4 h-4 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +67,11 @@
                                     <path d="M9 13h2v5a1 1 0 11-2 0v-5z"></path>
                                 </svg>
                                 Upload picture
-                            </button>
-                            <button type="button"
+                            </a>
+                            {{-- <button type="button"
                                 class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                                 Delete
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </div>

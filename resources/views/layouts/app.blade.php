@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  data-theme="garden">
 
 <head>
     <meta charset="utf-8">
@@ -32,7 +32,7 @@
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-800">
-
+    <x-wire-toast />
     <livewire:layout.navigation />
 
     <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">

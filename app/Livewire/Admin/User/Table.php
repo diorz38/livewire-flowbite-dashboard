@@ -34,7 +34,7 @@ class Table extends Component
 
     public function delete(User $user){
         dd($user);
-        if ($user->hasRole('Super Admin'))
+        if ($user->hasRole('super-admin'))
         {
             $user->syncRoles([]);
             $user->delete();
