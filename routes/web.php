@@ -4,6 +4,7 @@ use App\Livewire\ExampleChart;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Livewire\Kegiatan\Index as KegiatanIndex;
+use App\Livewire\Setting\Index as SettingIndex;
 use App\Livewire\Admin\User\Table as AdminUserTable;
 use phpDocumentor\Reflection\DocBlock\Tags\Example;
 
@@ -46,7 +47,7 @@ Route::middleware([
     });
 
     Route::get('/kegiatan', KegiatanIndex::class)->name('kegiatan.index');
-    Volt::route('/settings', 'settings')->name('settings');
+    Route::get('/settings', SettingIndex::class)->name('settings');
 
     Route::group(['middleware' => ['role:super-admin']], function () {
         Route::get('/admin/user', AdminUserTable::class)->name('admin.user');
