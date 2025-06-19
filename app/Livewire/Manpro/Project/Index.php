@@ -8,10 +8,12 @@ use Livewire\Attributes\On;
 class Index extends Component
 {
     public $modalCreateProduct = 0;
+    public $id = 0;
     public $array = ['active', 'inactive', 'pending', 'suspended'];
     #[On('open-modal')]
-    public function openModal()
+    public function openModal($id)
     {
+        $this->id = $id+1;
         $this->modalCreateProduct = ++$this->modalCreateProduct;
     }
 

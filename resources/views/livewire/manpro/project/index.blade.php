@@ -132,7 +132,7 @@
                 <div class="overflow-hidden shadow">
                     <div class="grid grid-cols-1 gap-2 mx-4 my-4 md:grid-cols-4">
                         <div x-data
-                            @click="$dispatch('open-modal', { name:'create-product' })"
+                            @click="$dispatch('open-modal', { name:'create-product', id:4 })"
                             class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
                             <x-project.card modalCreateProduct="{{ $modalCreateProduct }}" :data="$array" />
                         </div>
@@ -204,13 +204,16 @@
     </div>
 
     <x-flowbite.test-drawer name="create-product" label="Add new product" width="max-w-xl">
+        @foreach ($array as $i)
         <div>
             <label for="name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ $i }} {{ $id }}</label>
             <input type="text" name="title" id="name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Type product name" required="">
         </div>
+
+        @endforeach
 
         <div>
             <label for="price"
