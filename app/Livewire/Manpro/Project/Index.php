@@ -9,7 +9,7 @@ class Index extends Component
 {
     public $modalCreateProduct = 0;
     public $id = 0;
-    public $array = ['active', 'inactive', 'pending', 'suspended'];
+    public $array = ['Pelatihan Petugas', 'Pelaksanaan Lapangan', 'Supervisi Lapangan', 'Pengolahan Hasil', 'Evaluasi','Pelaporan'];
     #[On('open-modal')]
     public function openModal($id)
     {
