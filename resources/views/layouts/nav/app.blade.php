@@ -39,7 +39,7 @@
                 </svg>
                 <div class="text-sm text-gray-900 dark:text-white">Users</div>
             </a>
-            <a wire:navigate href="#"
+            <a wire:navigate href="{{ route('manpro.project.index') }}"
                 class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
                 <svg aria-hidden="true"
                     class="mx-auto mb-1 text-gray-400 w-7 h-7 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
@@ -48,7 +48,7 @@
                         d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
                         clip-rule="evenodd"></path>
                 </svg>
-                <div class="text-sm text-gray-900 dark:text-white">Inbox</div>
+                <div class="text-sm text-gray-900 dark:text-white">Projects</div>
             </a>
             <a wire:navigate href="#"
                 class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">

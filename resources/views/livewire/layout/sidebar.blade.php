@@ -55,7 +55,9 @@ new class extends Component {
                     @if(in_array(Request::segment(1), ['flowbite']))
                         @include('livewire.layout.sidebar.flowbite')
                     @endif
-
+                    {{-- @if(in_array(Request::segment(1), ['manpro'])) --}}
+                        @include('livewire.layout.sidebar.project')
+                    {{-- @endif --}}
                     @role('super-admin')
                     <li>
                         <button type="button"
@@ -160,7 +162,7 @@ new class extends Component {
             </div>
             <button type="button" data-dropdown-toggle="language-dropdown"
                 class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="{{ asset('manpro8.svg') }}" class="h-6 w-auto" alt="Manpro Logo" />
+                <img src="{{ asset('manpro8.svg') }}" class="w-auto h-6" alt="Manpro Logo" />
             </button>
 
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700"
