@@ -23,7 +23,7 @@ new class extends Component {
             <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                 <ul class="pb-2 space-y-2">
                     <li>
-                        <form action="#" method="GET" class="lg:hidden">
+                        {{-- <form action="#" method="GET" class="lg:hidden">
                             <label for="mobile-search" class="sr-only">Search</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -38,7 +38,7 @@ new class extends Component {
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-200 dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     placeholder="Search">
                             </div>
-                        </form>
+                        </form> --}}
                     </li>
                     <li>
                         <a wire:navigate href="{{ route('dashboard') }}"
