@@ -120,6 +120,8 @@ layout('layouts.app');
                         </svg>
                         Add user
                     </button>
+                    <x-wire-button label="Open" x-on:click="$openModal('persistentModal')"
+                        class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"/>
                     <a href="#"
                         class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
                         <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
@@ -134,6 +136,24 @@ layout('layouts.app');
             </div>
         </div>
     </div>
+    <x-wire-modal name="persistentModal" persistent>
+        <x-wire-card title="Consent Terms">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+    
+            <x-slot name="footer" class="flex justify-end gap-x-4">
+                <x-wire-button flat label="Cancel" x-on:click="close" />
+    
+                <x-wire-button primary label="I Agree" wire:click="agree" />
+            </x-slot>
+        </x-wire-card>
+    </x-wire-modal>
     <div class="flex flex-col">
         <div class="overflow-x-auto">
             <div class="inline-block min-w-full align-middle">
