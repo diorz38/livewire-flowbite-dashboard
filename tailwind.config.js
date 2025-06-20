@@ -99,7 +99,5 @@ export default {
     },
 
 
-    plugins: [forms, typography,require('flowbite/plugin')({
-        charts: true,
-    })],
+    plugins: [forms, typography,require('flowbite/plugin')],
 };
