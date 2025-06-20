@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5579d0b1871cde0a66e4479253b7665f",
+    "content-hash": "d5c8f3a27de4ffd26e5587bbabc6b13f",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1295,16 +1295,16 @@
         },
         {
             "name": "laravel/fortify",
-            "version": "v1.26.0",
+            "version": "v1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/fortify.git",
-                "reference": "2b3f76ba2fef31713d80bdfee66d0d36e6fc5d04"
+                "reference": "0fb2ec99dfee77ed66884668fc06683acca91ebd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/2b3f76ba2fef31713d80bdfee66d0d36e6fc5d04",
-                "reference": "2b3f76ba2fef31713d80bdfee66d0d36e6fc5d04",
+                "url": "https://api.github.com/repos/laravel/fortify/zipball/0fb2ec99dfee77ed66884668fc06683acca91ebd",
+                "reference": "0fb2ec99dfee77ed66884668fc06683acca91ebd",
                 "shasum": ""
             },
             "require": {
@@ -1356,20 +1356,20 @@
                 "issues": "https://github.com/laravel/fortify/issues",
                 "source": "https://github.com/laravel/fortify"
             },
-            "time": "2025-06-05T16:18:11+00:00"
+            "time": "2025-06-11T14:30:52+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v12.18.0",
+            "version": "v12.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d"
+                "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
+                "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
                 "shasum": ""
             },
             "require": {
@@ -1571,20 +1571,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-06-10T14:48:34+00:00"
+            "time": "2025-06-18T12:56:23+00:00"
         },
         {
             "name": "laravel/jetstream",
-            "version": "v5.3.6",
+            "version": "v5.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "cb4371c07f533b61cdc42a85b582ada68ed77e43"
+                "reference": "b606c21daeaa38547f853789212e3802b0f6ff08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/cb4371c07f533b61cdc42a85b582ada68ed77e43",
-                "reference": "cb4371c07f533b61cdc42a85b582ada68ed77e43",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/b606c21daeaa38547f853789212e3802b0f6ff08",
+                "reference": "b606c21daeaa38547f853789212e3802b0f6ff08",
                 "shasum": ""
             },
             "require": {
@@ -1638,7 +1638,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2025-03-24T16:58:34+00:00"
+            "time": "2025-06-16T13:27:00+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -6737,6 +6737,135 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wireui/heroicons",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wireui/heroicons.git",
+                "reference": "ccd2ab94293d6f231271c0847c1db34305313c6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wireui/heroicons/zipball/ccd2ab94293d6f231271c0847c1db34305313c6f",
+                "reference": "ccd2ab94293d6f231271c0847c1db34305313c6f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.16|^10.0|^11.0|^12.0",
+                "php": "^8.1|^8.2|^8.3|^8.4"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.6",
+                "orchestra/testbench": "^10.0",
+                "pestphp/pest": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aliases": [],
+                "laravel": {
+                    "providers": [
+                        "WireUi\\Heroicons\\HeroiconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WireUi\\Heroicons\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Oliveira",
+                    "email": "pedrolivertwd@gmail.com"
+                }
+            ],
+            "description": "The Tailwind Heroicons for laravel blade by WireUI",
+            "keywords": [
+                "blade components",
+                "blade heroicons",
+                "laravel components",
+                "livewire icons",
+                "livewire icons components",
+                "wireui"
+            ],
+            "support": {
+                "issues": "https://github.com/wireui/heroicons/issues",
+                "source": "https://github.com/wireui/heroicons/tree/v2.9.0"
+            },
+            "time": "2025-03-02T22:06:22+00:00"
+        },
+        {
+            "name": "wireui/wireui",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wireui/wireui.git",
+                "reference": "29f6b969f7c9c057379486fd6370915eaec5e32f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/29f6b969f7c9c057379486fd6370915eaec5e32f",
+                "reference": "29f6b969f7c9c057379486fd6370915eaec5e32f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0|^11.0|^12.0",
+                "php": "^8.2|^8.3|^8.4",
+                "wireui/heroicons": "^2.8"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.19",
+                "livewire/livewire": "^3.6",
+                "orchestra/testbench": "^10.0",
+                "orchestra/testbench-dusk": "^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0",
+                "pestphp/pest-plugin-livewire": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": [],
+                    "providers": [
+                        "WireUi\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WireUi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Oliveira",
+                    "email": "pedrolivertwd@gmail.com"
+                }
+            ],
+            "description": "TallStack components",
+            "keywords": [
+                "blade components",
+                "laravel components",
+                "livewire components",
+                "livewire-ui",
+                "wireui"
+            ],
+            "support": {
+                "issues": "https://github.com/wireui/wireui/issues",
+                "source": "https://github.com/wireui/wireui/tree/v2.4.3"
+            },
+            "time": "2025-04-29T22:34:44+00:00"
         }
     ],
     "packages-dev": [
@@ -8532,16 +8661,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "11.0.9",
+            "version": "11.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "14d63fbcca18457e49c6f8bebaa91a87e8e188d7"
+                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/14d63fbcca18457e49c6f8bebaa91a87e8e188d7",
-                "reference": "14d63fbcca18457e49c6f8bebaa91a87e8e188d7",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1a800a7446add2d79cc6b3c01c45381810367d76",
+                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76",
                 "shasum": ""
             },
             "require": {
@@ -8598,15 +8727,27 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.9"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpunit/php-code-coverage",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2025-02-25T13:26:39+00:00"
+            "time": "2025-06-18T08:56:18+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
