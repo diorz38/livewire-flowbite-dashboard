@@ -47,8 +47,8 @@ return new class extends Migration
             $table->string('members')->nullable();
             $table->unsignedBigInteger('organization_id')->nullable();
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('set null');
-            $table->unsignedBigInteger('department_id')->nullable();
-            // $table->foreign('department_id')->references('id')->on('departments')->onDelete('set null');
+            $table->unsignedBigInteger('departement_id')->nullable();
+            $table->foreign('departements_id')->references('id')->on('departments')->onDelete('set null');
             $table->date('start_at');
             $table->date('end_at')->nullable(); // Nullable for ongoing projects
             $table->string('icon')->nullable(); // Path to an icon image
